@@ -1,0 +1,142 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+	line-height: 40px;
+	margin: 0px;
+}
+
+#hello {
+		background-color: #1abc9c;
+		text-align: center;
+		padding: 80px;
+		color: white;
+}
+
+#dm{
+	color: lightgrey;
+}
+
+nav {
+	background-color: #333;
+	overflow: hidden;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	padding: 14px;
+	display: block;
+	text-align: center;
+
+}
+
+.trai{
+	float: left;
+}
+
+.phai{
+	float: right;
+}
+
+nav a:hover{
+	background-color: white;
+	color: black;
+}
+
+#left{
+	flex: 30%;
+	background-color: #f1f1f1;
+	padding: 10px 20px;
+}
+
+#right{
+	flex: 70%;
+	padding: 10px 20px;
+}
+
+#flex-container{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 1;
+  width: 100%;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+table th{
+	text-align: center;
+}
+
+#flex-container1{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+#trai1{
+	flex: 33%;
+	text-align: center;
+}
+
+#giua1{
+	flex: 33%;
+	text-align: center;
+}
+#phai1{
+	flex: 33%;
+	text-align: center;
+}
+
+@media(max-width: 850px){
+	#left{
+		flex: 100%;
+	}
+	#right{
+		flex: 100%;
+	}
+	#flex-container{
+		flex-wrap: wrap;
+	}
+
+	#flex-container1{
+		flex-wrap: wrap;
+	}
+}
+
+@media(max-width: 420px){
+	#left{
+		flex: 100%;
+	}
+	#right{
+		flex: 100%;
+	}
+	#flex-container{
+		flex-wrap: wrap;
+	}
+	#flex-container1{
+		flex-wrap: wrap;
+	}
+}
+
+
+
