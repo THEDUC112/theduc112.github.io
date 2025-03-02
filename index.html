@@ -39,7 +39,7 @@
         if (loaded) return;
         loaded = true;
         var mobile = window.isDevice;
-        var koef = mobile ? 0.5 : 1;
+        var scaleFactor = window.isDevice ? 0.6 : 1; // Nhỏ hơn trên mobile
         var canvas = document.getElementById('heart');
         var ctx = canvas.getContext('2d');
         var width = canvas.width = koef * innerWidth;
@@ -67,9 +67,9 @@
         var pointsOrigin = [];
         var i;
         var dr = mobile ? 0.2 : 0.05;
-        for (i = 0; i < Math.PI * 2; i += dr) pointsOrigin.push(scaleAndTranslate(heartPosition(i), 400, 25, 0, 0));
-        for (i = 0; i < Math.PI * 2; i += dr) pointsOrigin.push(scaleAndTranslate(heartPosition(i), 340, 21, 0, 0));
-        for (i = 0; i < Math.PI * 2; i += dr) pointsOrigin.push(scaleAndTranslate(heartPosition(i), 280, 17, 0, 0));
+        for (i = 0; i < Math.PI * 2; i += dr) pointsOrigin.push(scaleAndTranslate(heartPosition(i), 400 * scaleFactor, 25 * scaleFactor, 0, 0));
+        for (i = 0; i < Math.PI * 2; i += dr) pointsOrigin.push(scaleAndTranslate(heartPosition(i), 340 * scaleFactor, 21 * scaleFactor, 0, 0));
+        for (i = 0; i < Math.PI * 2; i += dr) pointsOrigin.push(scaleAndTranslate(heartPosition(i), 280 * scaleFactor, 17 * scaleFactor, 0, 0));
         var heartPointsCount = pointsOrigin.length;
 
         var targetPoints = [];
